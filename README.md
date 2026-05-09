@@ -5,7 +5,7 @@ Factorial Calculator Web Application
 
 ## Student Details
 - Name: Nishmitha
-- USN: 4MW23C088
+- USN: 4MW23CS088
 - Semester: 6th Sem
 
 ## Technologies Used
