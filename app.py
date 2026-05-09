@@ -1,39 +1,20 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def home():
-    num1 = 18
-    num2 = 12
+    factorial = None
+    number = None
 
-    a = num1
-    b = num2
+    if request.method == 'POST':
+        number = int(request.form['number'])
+        factorial = 1
 
-    while b != 0:
-        a, b = b, a % b
+        for i in range(1, number + 1):
+            factorial *= i
 
-    hcf = a
-    lcm = (num1 * num2) // hcf
-
-    text = "Fun with Programming"
-    reversed_text = text[::-1]
-
-    factorials = {}
-
-    for i in range(4, 9):
-        fact = 1
-        for j in range(1, i + 1):
-            fact *= j
-        factorials[i] = fact
-
-    return render_template(
-        'index.html',
-        hcf=hcf,
-        lcm=lcm,
-        reversed_text=reversed_text,
-        factorials=factorials
-    )
+    return render_template('index.html', factorial=factorial, number=number)
 
 if __name__ == '__main__':
     app.run(debug=True)
