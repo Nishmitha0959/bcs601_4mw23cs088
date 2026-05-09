@@ -4,8 +4,8 @@
 Factorial Calculator Web Application
 
 ## Student Details
-- Name: YOUR NAME
-- USN: 4MW23CSXXX
+- Name: Nishmitha
+- USN: 4MW23C088
 - Semester: 6th Sem
 
 ## Technologies Used
@@ -27,7 +27,7 @@ This project is a simple factorial calculator web application developed using Py
 ## Project Structure
 
 ```bash
-bcs601_4mw23csxxx/
+bcs601_4mw23cs088/
 │
 ├── app.py
 ├── requirements.txt
